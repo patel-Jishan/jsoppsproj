@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project6</title>
+</head>
+<body>
+    <script>
+        class Students {
+            constructor(age){
+                this.stdName = "";
+                this.std = "";
+                this.no = "";
+                this.age = age;
+                this.dob = "";
+            }
+
+            setStudent(name, std, no, dob){
+                this.stdName = name;
+                this.std = std;
+                this.no = no;
+                this.dob = dob;
+            }
+
+            displayStudent(){
+                document.write(`<b>Student</b>: ${this.stdName}, Age: ${this.age}, Std: ${this.std}, No: ${this.no}, DOB: ${this.dob}<br>`);
+            }
+        }
+
+        class School extends Students {
+            constructor(age){
+                super(age);
+                this.schoolName = "";
+                this.class_no = "";
+                this.teacher = "";
+            }
+
+            setSchool(name, class_no, teacher){
+                this.schoolName = name;
+                this.class_no = class_no;
+                this.teacher = teacher;
+            }
+
+            displaySchool(){
+                document.write(`<b>School</b>: ${this.schoolName}, Class No: ${this.class_no}, Teacher: ${this.teacher}<br>`);
+            }
+        }
+
+        class College extends School {
+            constructor(age){
+                super(age);
+                this.collegeName = "";
+                this.streamName = "";
+                this.collegeTeacher = "";
+                this.area = "";
+            }
+
+            setCollege(name, stream, teacher, area){
+                this.collegeName = name;
+                this.streamName = stream;
+                this.collegeTeacher = teacher;
+                this.area = area;
+            }
+
+            displayCollege(){
+                document.write(`<b>College</b>: ${this.collegeName}, Stream: ${this.streamName}, Teacher: ${this.collegeTeacher}, Area: ${this.area}<br><br>`);
+            }
+        }
+
+        // Creating 5 student objects
+        let s1 = new College(17);
+        s1.setStudent("Nikhil", "12th", 1, "12-04-2007");
+        s1.setSchool("KV School", "12A", "Mrs. Sharma");
+        s1.setCollege("ABC College", "Science", "Dr. Verma", "Ahmedabad");
+
+        let s2 = new College(18);
+        s2.setStudent("Riya", "12th", 2, "22-03-2006");
+        s2.setSchool("St. Xavier", "12B", "Mr. Kumar");
+        s2.setCollege("XYZ College", "Commerce", "Mr. Patel", "Baroda");
+
+        let s3 = new College(17);
+        s3.setStudent("Jay", "12th", 3, "10-06-2007");
+        s3.setSchool("Shree School", "12C", "Ms. Joshi");
+        s3.setCollege("Gujarat College", "Arts", "Dr. Shah", "Surat");
+
+        let s4 = new College(19);
+        s4.setStudent("Neha", "12th", 4, "15-07-2005");
+        s4.setSchool("Bright School", "12D", "Ms. Kiran");
+        s4.setCollege("NSIT", "Engineering", "Mr. Desai", "Rajkot");
+
+        let s5 = new College(18);
+        s5.setStudent("Rohan", "12th", 5, "05-09-2006");
+        s5.setSchool("Modern School", "12E", "Mr. Iyer");
+        s5.setCollege("LD College", "Design", "Dr. Naik", "Bhavnagar");
+
+        document.write("<h3>Multilevel Inheritance: Student Details</h3>");
+        s1.displayStudent(); s1.displaySchool(); s1.displayCollege();
+        s2.displayStudent(); s2.displaySchool(); s2.displayCollege();
+        s3.displayStudent(); s3.displaySchool(); s3.displayCollege();
+        s4.displayStudent(); s4.displaySchool(); s4.displayCollege();
+        s5.displayStudent(); s5.displaySchool(); s5.displayCollege();
+    </script>
+</body>
+</html>

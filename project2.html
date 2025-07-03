@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project2</title>
+</head>
+<body>
+    <!-- 2) Employee class create a constructor called print a Employee name , salary , age , mail and  message. -->
+
+    <script>
+        class Employee{
+            constructor(name,salary,age,mail){
+                this.name = name;
+                this.salary=salary;
+                this.age=age;
+                this.mail=mail;
+                this.message="Employee record created Successfully";
+            }
+            display(){
+                document.write(`<h3>Employee Details</h3>`);
+                document.write(`Name:${this.name}<br>Salary: ₹${this.salary}<br>Age: ${this.age}<br>Email: ${this.mail}<br>Message: ${this.message}<br><br>`);
+            }
+        }
+        let emp1 = new Employee("Jishan Patel", 50000, 22, "jishanpatel.15072003@gmail.com");
+        emp1.display();
+    </script>
+    
+</body>
+</html>

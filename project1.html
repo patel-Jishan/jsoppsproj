@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+</head>
+<body>
+    <!-- 1) Create a Person class and with argument create a Father and Child method father print to name , age , occupation .. -->
+
+    <script>
+        class Person {
+            constructor(name, age, occupation) {
+                this.name = name;
+                this.age=age;
+                this.occupation=occupation;
+            }
+            father() {
+                document.write(`<h3>Father Details</h3> `);
+                document.write(`Name: ${this.name}<br>Age: ${this.age}<br>Occupation: ${this.occupation}<br><br>`);
+            }
+            child(childName,childAge){
+                document.write(` <h3> Child Details </h3>`);
+                document.write(`Name: ${childName} <br>Age:${childAge}<br><br>`);
+            }
+        }
+        let person =new Person("Jishan",45,"Fullstack Developer");
+        person.father();
+        person.child("Rahul",15);
+
+    </script>
+    
+</body>
+</html>

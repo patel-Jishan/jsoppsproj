@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+</head>
+<body>
+    <!-- 3) Create a shape class and create a rectangle and circle method find circle area(3.14*r*r) and rectangle area (width*height) using with argument. -->
+
+    <script>
+        class Shape{
+            rectangle(width,height){
+                let area = width * height;
+                document.write(`<h3>Rectangle Area </h3>Width:${width},Height:${height}:${area}<br><br>`)
+            }
+            circle(radius){
+                let area = 3.14 * radius * radius;
+                        document.write(`<h3>Circle Area</h3>Radius: ${radius}<br>Area: ${area}<br><br>`);
+
+            }
+        }
+        let shape=new Shape();
+        shape.rectangle(10,5);
+        shape.circle(7);
+    </script>
+    
+</body>
+</html>

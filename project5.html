@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project5</title>
+</head>
+<body>
+    <!-- 5)  WAP to make single inheritance and print to criketers details ..3 creketers details  -->
+         <script>
+            class Cricket {
+                constructor(name, country, runs) {
+                    this.name = name;
+                    this.country=country;
+                    this.runs=runs;
+                }
+                display() {
+        document.write(`<h3>Cricketer Details</h3>`);
+        document.write(`Name: ${this.name}<br>Country: ${this.country}<br>Total Runs: ${this.runs}<br><br>`);
+      }
+    }
+    class Batsman extends Cricket {}
+    let batsman1 = new Batsman("Virat Kohli", "India",12000);
+    let batsman2 = new Batsman("Rohit Sharma", "India",10000);
+    let batsman3 = new Batsman("Rishab Pant", "India",15000);
+    let batsman4 = new Batsman("Ravindra Jadeja", "India",90000);
+    batsman1.display();
+    batsman2.display();
+    batsman3.display();
+    batsman4.display();
+</script>
+</body>
+</html>
